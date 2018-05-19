@@ -1,0 +1,162 @@
+#word
+{
+	position: absolute;
+	height: 125px;
+	top: calc(50vh - 160px);
+	left: calc(50vw - 403px);	
+	max-width: 773px;
+	min-width: 773px;
+	font-family: "Love Ya Like A Sister";
+	font-size: 100px;
+	color: white;
+	display: none;
+	opacity: 0;
+	transition: opacity 1s;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.wordReveal
+{
+	position: absolute;
+	top: 0px;
+	height: 0px;
+	font-family: "Love Ya Like A Sister";
+	font-size: 39.2px;
+	color: rgb(255,255,255,0.8);
+	text-align: center;
+	white-space: nowrap;
+}
+
+#back-button-4
+{
+	z-index: 15;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-family: "Quicksand";
+	outline: none;
+	background-color: rgba(47,80,90, 1);
+	border: none;
+	color: rgb(255,255,255,0.7);
+	font-size: 18px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	display: none;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#back-button-4:hover
+{
+	   background-color: rgb(51,86,97);
+}
+
+#back-button-4:active 
+{
+	  color: rgb(10,10,10,1);
+	  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.8);
+}
+
+
+#modeLabel
+{
+	z-index: 15;
+	display: none;
+	position: absolute;
+	top: 15px;
+	left: 100px;
+	color: rgba(255,255,255, 0.6);
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: underline;
+	font-family: 'Quicksand';
+	background-color: rgba(90,47,52, 0.9);
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#progressLabel
+{
+	z-index: 15;
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: rgba(255,255,255, 0.6);
+	font-size: 18px;
+	font-family: 'Love Ya Like A Sister';
+	background-color: rgba(0,0,0,0.5);
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#letterQueue
+{
+	z-index: 15;
+	display: none;
+	position: absolute;
+	bottom: 75px;
+	left: 35px;
+	height: 490px;
+	width: 41px;
+	color: rgba(255,255,255, 0.6);
+	font-size: 44px;
+	font-family: 'Love Ya Like A Sister';
+	background-color: rgba(0,0,18, 0.5);
+	padding-left: 15px;
+	padding-right: 19px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+	opacity: 0;
+	transition: opacity 1s;
+	text-align: center;
+}
+
+#letterQueue div
+{
+	  position: absolute;
+	  top: 8px;
+	  left: 8px;
+	  right: 8px;
+	  bottom: 8px;
+	  border: 2px solid rgba(255,255,255,0.8);
+}
+
+#clue
+{
+	z-index: 15;
+	display: none;
+	position: absolute;
+	top: 50px;
+	max-width: 773px;
+	min-width: 773px;
+	left: calc(50vw - 403px);
+	color: rgba(255,255,255, 0.7);
+	font-size: 24px;
+	font-family: 'Quicksand';
+	background-color: rgba(0,0,0,0.3);
+	padding-left: 15px;
+	padding-right: 19px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+	opacity: 0;
+	transition: opacity 1s;
+	text-align: center;
+}

@@ -1,0 +1,513 @@
+#letter-wheel-text
+{
+	font-family: 'Love Ya Like A Sister';
+	font-size: 39.2px;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#letter-circle
+{
+	position: absolute;
+	top: calc(50vh - 300px);
+	left: calc(50vw - (45vw));
+	display: none;
+	user-select: none;
+	z-index: 12;
+	/*animation: letter-wheel-spin 40s linear infinite;
+	will-change: transform;*/
+}
+
+@keyframes letter-wheel-spin
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+  
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes letter-wheel-spin-chosen-move
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+
+  
+	100%
+	{
+		
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes letter-wheel-spin-chosen
+{
+	0%
+	{	
+		transform: rotate(-180deg);
+	}
+  
+	100%
+	{
+		transform: rotate(180deg);
+	}
+}
+
+#landing-div-1
+{
+	position: absolute;
+	top: calc(50vh - ((50vh / 2) + 80px));
+	left: calc(50vw);
+	/*background-color: rgba(90,47,52, 0.2);*/
+	background-color: rgb(64,55,63);
+	color: rgba(255,255,255,0.8);
+	font-size: 24px;
+	font-family: "Quicksand";
+	width: 575px;
+	height: 125px;
+	padding: 25px;
+	padding-top: 20px;
+	border: 1px solid rgb(48,48,56);
+	border-radius: 10px;
+	box-shadow: 4px 4px 15px rgb(18,18,26);
+	transform: rotate3d(1,0,0, 90deg);
+	display: none;
+	z-index: 20;
+	transition: transform 1s, height 1s;
+}
+
+@keyframes dropInZ
+{
+	0%
+	{
+		transform: rotate3d(35,4,1, -90deg);   
+	}
+	100%
+	{
+		transform: rotate3d(35,4,1, 0deg);   
+	}
+}
+
+#landing-div-2
+{
+	position: absolute;
+	top: calc(50vh - ((50vh / 2) - 110px));
+	left: calc(50vw);
+	/*background-color: rgba(90,47,92, 0.2);*/
+	background-color: rgb(64,55,71);
+	color: rgba(255,255,255,0.8);
+	font-size: 24px;
+	font-family: "Quicksand";
+	width: 575px;
+	height: 125px;
+	padding: 25px;
+	padding-top: 20px;
+	border: 1px solid rgb(48,48,56);
+	border-radius: 10px;
+	box-shadow: 4px 4px 15px rgb(18,18,26);
+	transform: rotate3d(1,0,0, 90deg);
+	/*animation: dropInZ 1s;*/
+	/*animation-fill-mode: forwards;*/
+	display: none;
+	z-index: 20;
+	transition: transform 1s, height 1s, top 1s;
+}
+
+#landing-div-3
+{
+	position: absolute;
+	top: calc(50vh - ((50vh / 2) - 300px));
+	left: calc(50vw);
+	/*background-color: rgba(90,47,132, 0.2);*/
+	background-color: rgb(64,55,79);
+	color: rgba(255,255,255,0.8);
+	font-size: 24px;
+	font-family: "Quicksand";
+	width: 575px;
+	height: 125px;
+	padding: 25px;
+	padding-top: 20px;
+	border: 1px solid rgb(48,48,56);
+	border-radius: 10px;
+	box-shadow: 4px 4px 15px rgb(18,18,26);
+	transform: rotate3d(1,0,0, 90deg);
+	/*animation: dropInZ 1s;*/
+	/*animation-fill-mode: forwards;*/
+	display: none;
+	z-index: 20;
+	transition: transform 1s, height 1s, top 1s;
+}
+
+div p
+{
+	font-size: 18px;
+	color: rgba(255,255,255, 0.6);
+	background-color: rgba(0,0,0,0.3);
+	padding-left: 15px;
+	padding-right: 7px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+}
+
+.right-corner
+{
+	display: block;
+	position: absolute;
+	color: rgba(255,255,255, 0.6);
+	top: 30px;
+	right: 30px;
+	/*font-family: sans-serif;*/
+	text-align: left;
+	cursor: pointer;
+}
+
+.attempts-text, .words-text
+{
+	color: rgba(255,255,255, 0.5);
+	font-size: 14px;
+	font-weight: normal;
+	width: 0px;
+	display: inline-block;
+	overflow-x: hidden;
+	transition: width 1s;
+	height: 15px;
+}
+
+.info-icon
+{
+	transition: color 500ms;
+}
+
+#launch-div-1
+{
+	position: absolute;
+	top: calc(50vh - ((50vh / 2) + 80px));
+	left: calc(50vw);
+	background-color: rgb(64,55,63);
+	color: rgba(255,255,255,0.8);
+	font-size: 24px;
+	font-family: "Quicksand";
+	width: 15px;
+	height: 125px;
+	padding: 25px;
+	padding-top: 20px;
+	border: 1px solid rgb(48,48,56);
+	border-radius: 10px;
+	box-shadow: -3px 4px 15px rgba(18,18,26,0);
+	transform: rotate3d(0,0,0, 90deg);
+	z-index: 19;
+  	display: none;
+	opacity: 0;
+	transition: transform 500ms, box-shadow 500ms, opacity 500ms;
+}
+
+#launch-div-2
+{
+	position: absolute;
+	top: calc(50vh - ((50vh / 2) - 110px));
+	left: calc(50vw);
+	background-color: rgb(64,55,71);
+	color: rgba(255,255,255,0.8);
+	font-size: 24px;
+	font-family: "Quicksand";
+	width: 15px;
+	height: 125px;
+	padding: 25px;
+	padding-top: 20px;
+	border: 1px solid rgb(48,48,56);
+	border-radius: 10px;
+	box-shadow: -3px 4px 15px rgba(18,18,26,0);
+	transform: rotate3d(0,0,0, 90deg);
+	z-index: 19;
+  	display: none;
+	opacity: 0;
+	transition: transform 500ms, box-shadow 500ms, opacity 500ms, top 1s;
+}
+
+#launch-div-3
+{
+	position: absolute;
+	top: calc(50vh - ((50vh / 2) - 300px));
+	left: calc(50vw);
+	background-color: rgb(64,55,79);
+	color: rgba(255,255,255,0.8);
+	font-size: 24px;
+	font-family: "Quicksand";
+	width: 15px;
+	height: 125px;
+	padding: 25px;
+	padding-top: 20px;
+	border: 1px solid rgb(48,48,56);
+	border-radius: 10px;
+	box-shadow: -3px 4px 15px rgba(18,18,26,0);
+	transform: rotate3d(0,0,0, 90deg);
+	z-index: 19;
+  	display: none;
+	opacity: 0;
+	transition: transform 500ms, box-shadow 500ms, opacity 500ms, top 1s;
+}
+
+
+.launch-button
+{
+	display: block;
+	position: absolute;
+	bottom: calc(50% - 20px);
+	left: -17px;
+	width: 60px;
+	font-size: 18px;
+	color: rgba(255,255,255, 0.6);
+	background-color: rgba(0,0,0,0.3);
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+	transform: rotate(270deg);
+	cursor: pointer;
+	user-select: none;
+}
+
+.launch-button:hover
+{
+	color: rgba(255,255,255, 0.8);
+}
+
+.launch-button:active
+{
+	padding-right: 17px;
+	padding-left: 13px;
+	color: rgb(255,255,255,0.2);	
+	box-shadow: inset -2px 0px 10px rgba(0,0,0,0.5);
+}
+
+#leftClipCover
+{
+	z-index: 15;
+	display: block;
+	width: 1px;
+	height: 100%;
+	background-color: rgba(18,18,26, 0.55);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	transition: opacity 500ms;
+}
+
+#rightClipCover
+{
+	z-index: 15;
+	display: block;
+	width: 1px;
+	height: 100%;
+	background-color: rgba(18,18,26, 0.55);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	opacity: 0;
+	transition: opacity 500ms;
+}
+
+#menu-title
+{
+	z-index: 15;
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: calc(50vw - 240px);
+	width: 480px;
+	height: 60px;
+	color: rgb(225,225,225);
+	font-size: 48px;
+	font-style: italic;
+	text-align: center;
+	border-bottom: 1px solid rgb(175,175,175);
+	/*text-decoration: underline;*/
+	font-family: 'Love Ya Like A Sister';
+	user-select: none;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#menu-title-cover
+{
+	z-index: 16;
+	display: none;
+	position: absolute;
+	background-color: rgba(36,36,44, 0.5);
+	top: 0px;
+	left: calc(50vw - 240px);
+	width: 480px;
+	height: 0px;
+	color: white;
+}
+
+#hangman-button-1, #hangman-button-2, #hangman-button-3
+{
+	margin: 0 auto;
+	font-family: "Quicksand";
+	outline: none;
+	background-color: rgba(90,47,52, 1);
+	border: none;
+	color: rgb(255,255,255,0.7);
+	font-size: 18px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	user-select: none;
+	display: none;
+}
+
+#hangman-button-1:hover, #hangman-button-2:hover, #hangman-button-3:hover
+{
+	  background-color: rgb(100,57,62);
+}
+
+#typist-button-1:active, #back-button-1:active, #typist-button-2:active, #back-button-2:active, #typist-button-3:active, #back-button-3:active 
+{
+	  color: rgb(10,10,10,1);
+	  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.8);
+}
+
+#hangman-button-1:active, #play-button-1:active, #hangman-button-2:active, #play-button-2:active, #hangman-button-3:active, #play-button-3:active
+{
+	  color: rgb(10,10,10,1);
+	  box-shadow: inset 0px 0px 15px rgba(0,0,0,0.5);
+}
+
+#typist-button-1, #typist-button-2, #typist-button-3
+{
+	margin: 0 auto;
+	font-family: "Quicksand";
+	outline: none;
+	background-color: rgba(47,90,50, 1);
+	border: none;
+	color: rgb(255,255,255,0.7);
+	font-size: 18px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 60px;
+	display: none;
+}
+
+#typist-button-1:hover, #typist-button-2:hover, #typist-button-3:hover
+{
+	  background-color: rgb(57,100,60);
+}
+
+#back-button-1, #back-button-2, #back-button-3
+{
+	margin: 0 auto;
+	font-family: "Quicksand";
+	outline: none;
+	background-color: rgba(47,80,90, 1);
+	border: none;
+	color: rgb(255,255,255,0.7);
+	font-size: 18px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 59px;
+	display: none;
+}
+
+#back-button-1:hover, #back-button-2:hover, #back-button-3:hover
+{
+	   background-color: rgb(51,86,97);
+}
+
+#play-button-1, #play-button-2, #play-button-3
+{
+	margin: 0 auto;
+	font-family: "Quicksand";
+	outline: none;
+	background-color: rgba(73,47,90, 1);
+	border: none;
+	color: rgb(255,255,255,0.7);
+	font-size: 18px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	display: none;
+}
+
+#play-button-1:hover, #play-button-2:hover, #play-button-3:hover
+{
+	   background-color: rgb(79,51,97);
+}
+
+.circle-holder-h
+{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	/*background-color: rgb(100,57,62);*/
+	background-color: limegreen;
+	border-radius: 50%;
+}
+
+.circle-holder-t
+{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-color: rgb(57,100,60);
+	/*background-color: rgb(23,184,232);*/
+	border-radius: 50%;
+}
+
+.mode-selection-window-h
+{
+	display: none;
+	font-family: "Quicksand";
+	background-color: rgba(90,47,52, 0.9);
+	font-size: 18px;
+	color: rgba(255,255,255, 0.6);
+	padding-left: 15px;
+	padding-right: 7px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+}
+
+.mode-selection-window-t
+{
+	display: none;
+	font-family: "Quicksand";
+	background-color: rgba(47,90,50, 0.9);
+	font-size: 18px;
+	color: rgba(255,255,255, 0.6);
+	padding-left: 15px;
+	padding-right: 7px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+}
+
+.msw-title
+{
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration: underline;
+}

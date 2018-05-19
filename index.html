@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Word Guess Game</title>
+<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./assets/css/intro.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/menu.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/logic.css">
+<script src="./assets/js/wordLists.js"></script>
+<script src="./assets/js/intro.js"></script>
+<script src="./assets/js/menu.js"></script>
+<script src="./assets/js/logic.js"></script>
+</head>
+<body>
+	<div id="squareContainer">
+		<div id="square-0" class="square"><div id="cover-0" class="cover"></div></div>
+		<div id="square-1" class="square"><div id="cover-1" class="cover"></div></div>
+		<div id="square-2" class="square"><div id="cover-2" class="cover"></div></div>
+		<div id="square-3" class="square"><div id="cover-3" class="cover"></div></div>
+		<div id="square-4" class="square"><div id="cover-4" class="cover"></div></div>
+		<div id="square-5" class="square"><div id="cover-5" class="cover"></div></div>
+		<div id="square-6" class="square"><div id="cover-6" class="cover"></div></div>
+		<div id="square-7" class="square"><div id="cover-7" class="cover"></div></div>
+		<div id="square-8" class="square"><div id="cover-8" class="cover"></div></div>
+	</div>
+	<button id="startButton"></button>
+	<svg height="72" width="72" id="load-circle">
+  		<circle id="tape-measure" cx="36" cy="36" r="34" stroke="rgb(18,18,26)" stroke-width="7" fill="none"/>
+	</svg>
+	<div id="arrow-1" class="arrow"><span class="arrow-1-angle">&#8250;</span></div>
+	<div id="arrow-2" class="arrow"><span class="arrow-2-angle">&#8249;</span></div>
+	<div id="arrow-3" class="arrow"><span class="arrow-3-angle">&#8249;</span></div>
+	<div id="hiddenText">
+	WORD GUESS GAME
+	<div id="startText">Start</div>
+	<div id="authorText">By: Steven Passey</div>
+	</div>
+	<div id="textCover">
+	</div>
+	<div id="borderCover">
+	</div>
+	<div id="startFill">
+	</div>
+	<div id="popupText">
+	Hint: Move the cursor around the page to see the magic!
+	</div>
+	<div id="topClipCover">
+	</div>
+	<div id="bottomClipCover">
+	</div>
+	<div id="leftClipCover">
+	</div>
+	<div id="rightClipCover">
+	</div>
+	<div id="borderDraw-1" class="borderDraw">
+	</div>
+	<div id="borderDraw-2" class="borderDraw">
+	</div>
+	<div id="borderDraw-3" class="borderDraw">
+	</div>
+	<div id="borderDraw-4" class="borderDraw">
+	</div>
+
+	<!-- Menu Items -->
+	<svg width="500" height="500" id="letter-circle">
+		<path id="letter-curve" d="M250, 386.4c-74.8,   
+						0-135.5-60.7-135.5-135.5s60.7-135.5,135.5-135.5s135.5, 
+						60.7, 135.5, 135.5 S318, 386.4, 243.2, 386.4z" id="textcircle" fill="none"/>
+  		<text width="500" fill="white"> 
+    			<textPath id="letter-wheel-text" class="letter-characters" xlink:href="#letter-curve" >
+      			A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+    			</textPath>
+  		</text>
+	</svg>
+	<div id="landing-div-1">
+		HTML5 Tags
+		<p>
+			A series of HTML5 tags. This set includes new semantic tags and svg tags, as well as several fundamental tags. This is an example set provided with the game.
+		</p>
+		<span class="mode-selection-window-h" id="modeSelectionWindowH1">
+			<span class="msw-title">
+				Hangman Mode
+			</span>
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hangman mode is the default mode. It is the mode that follows the homework grading rubric. In Hangman mode, the player chooses letters for the word in any order. The round is over when the player has made 9 wrong guesses, or the player has correctly guessed all the letters.
+		</span>
+		<span class="mode-selection-window-t" id="modeSelectionWindowT1">
+			<span class="msw-title">
+				Typist Mode
+			</span>
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typist mode is a faster mode than hangman mode. In Typist mode, the player chooses letters for the word in order from left to right. The round is over when the player presses enter. The correct word is displayed in green if the player is correct, and red if the player incorrect.
+		</span>
+		<span id="info-icon-span-1" class="right-corner fa">  
+			<strong>24<span class="attempts-text">&nbsp;hangman&nbsp;</span> | 48<span class="words-text">&nbsp;typist </span></strong> &nbsp; 
+			<span id="info-icon-1" class="info-icon">&#xf05a;</span>
+		</span>
+		<br>
+		<button id="back-button-1">&lt; Back</button>
+		<button id="hangman-button-1"><span class="circle-holder-h"></span> Hangman Mode</button>
+		<button id="typist-button-1"><span class="circle-holder-t"></span> Typist Mode</button>
+		<button id="play-button-1">Play</button>
+	</div>
+	<div id="landing-div-2" style="visibility: hidden !important;">
+		CSS Selectors
+		<p>
+			A series of CSS selectors. This set includes common CSS selectors and some selectors with specific use cases. This is an example set provided with the game.
+		</p>
+		<span class="mode-selection-window-h" id="modeSelectionWindowH2">
+			<span class="msw-title">
+				Hangman Mode
+			</span>
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hangman mode is the default mode. It is the mode that follows the homework grading rubric. In Hangman mode, the player chooses letters for the word in any order. The round is over when the player has made 9 wrong guesses, or the player has correctly guessed all the letters.
+		</span>
+		<span class="mode-selection-window-t" id="modeSelectionWindowT2">
+			<span class="msw-title">
+				Typist Mode
+			</span>
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typist mode is a faster mode than hangman mode. In Typist mode, the player chooses letters for the word in order from left to right. The round is over when the player presses enter. The correct word is displayed in green if the player is correct, and red if the player incorrect.
+		</span>
+		<span id="info-icon-span-2" class="right-corner fa">  
+			<strong>40<span class="attempts-text">&nbsp;attempts</span> | 20<span class="words-text">&nbsp;words&nbsp; </span></strong> &nbsp; 
+			<span id="info-icon-2" class="info-icon">&#xf05a;</span>
+		</span>
+		<br>
+		<button id="back-button-2">&lt; Back</button>
+		<button id="hangman-button-2"><span class="circle-holder-h"></span> Hangman Mode</button>
+		<button id="typist-button-2"><span class="circle-holder-t"></span> Typist Mode</button>
+		<button id="play-button-2">Play</button>
+	</div>
+	<div id="landing-div-3" style="visibility: hidden !important;">
+		Javscript Methods & Properties
+		<p>
+			A series of Javscript methods & properties. This set includes useful method names and properties, many of which are used for DOM manipulation. This is an example set.
+		</p>
+		<span class="mode-selection-window-h" id="modeSelectionWindowH3">
+			<span class="msw-title">
+				Hangman Mode
+			</span>
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hangman mode is the default mode. It is the mode that follows the homework grading rubric. In Hangman mode, the player chooses letters for the word in any order. The round is over when the player has made 9 wrong guesses, or the player has correctly guessed all the letters.
+		</span>
+		<span class="mode-selection-window-t" id="modeSelectionWindowT3">
+			<span class="msw-title">
+				Typist Mode
+			</span>
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typist mode is a faster mode than hangman mode. In Typist mode, the player chooses letters for the word in order from left to right. The round is over when the player presses enter. The correct word is displayed in green if the player is correct, and red if the player incorrect.
+		</span>
+		<span id="info-icon-span-3" class="right-corner fa">  
+			<strong>40<span class="attempts-text">&nbsp;hangman</span> | 20<span class="words-text">&nbsp;typist&nbsp; </span></strong> &nbsp; 
+			<span id="info-icon-3" class="info-icon">&#xf05a;</span>
+		</span>
+		<br>
+		<button id="back-button-3">&lt; Back</button>
+		<button id="hangman-button-3"><span class="circle-holder-h"></span> Hangman Mode</button>
+		<button id="typist-button-3"><span class="circle-holder-t"></span> Typist Mode</button>
+		<button id="play-button-3">Play</button>
+	</div>
+	<div id="launch-div-1">
+		<span class="launch-button">Launch</span>
+	</div>
+	<div id="launch-div-2" style="visibility: hidden !important;">
+		<span class="launch-button">Launch</span>
+	</div>
+	<div id="launch-div-3" style="visibility: hidden !important;">
+		<span class="launch-button">Launch</span>
+	</div>
+	<div id="menu-title">
+		Word List Selection
+	</div>
+	<div id="menu-title-cover">
+	</div>
+
+	<!-- User Interface -->
+	<div id="word">_ _ _ _ _ _</div>
+	<button id="back-button-4">&lt; Back</button>
+	<div id="modeLabel">Hangman Mode</div>
+	<div id="progressLabel">0 / 40</div>
+	<div id="letterQueue"><div></div>W W W W W W </div>
+	<div id="clue"></div>
+	
+</body>
+</html>
