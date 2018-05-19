@@ -277,7 +277,7 @@ function typist_key_capture(e)
 		if(e.keyCode !== 13)
 		{
 			
-		 	if(e.keyCode === 8 && moveAlong !== 0)
+		 	if(e.keyCode === 8 && moveAlong !== 0 && word_fill != "")
 			{
 				myTypistLetter = "";
 				word_fill = word_fill.substring(0, word_fill.length - 1);
